@@ -21,7 +21,7 @@ extern NSImage* MAVFriendNotAvailable;
 @implementation MAVChatStream
 
 - (MAVChatStream*)initWithToken:(NSString *)token {
-	dispatch_queue_t operationQueue = dispatch_queue_create("XMPP_OP_QUEUE", NULL);
+	dispatch_queue_t operationQueue = dispatch_get_main_queue();
 
 	self = [super initWithFacebookAppId:kFacebookId];
 	self.token = token;
@@ -160,15 +160,13 @@ extern NSImage* MAVFriendNotAvailable;
 	NSLog(@"DidReceiveMESSAGE, %@", [message description]);
 
 	if ([message isChatMessageWithBody]) {
-		XMPPUserCoreDataStorageObject *user =
-			[self.roasterStorage userForJID:[message from]
-								 xmppStream:self
-					   managedObjectContext:
-				[self.roasterStorage mainThreadManagedObjectContext]];
 
 		NSString *messageData = [[message elementForName:@"body"] stringValue];
-		NSString *userId = [[[user jidStr] substringFromIndex:1]
-							substringToIndex:[[user jidStr] rangeOfString:@"@"].location-1];
+
+		NSString *userId = [[[[message attributeForName:@"from"] stringValue] substringFromIndex:1]
+							substringToIndex:[[[message attributeForName:@"from"] stringValue]
+											  rangeOfString:@"@"].location-1];
+
 
 		//NSLog(@"%@\n\n", user);
 		NSLog(@"Message (%@): %@", userId, messageData);
