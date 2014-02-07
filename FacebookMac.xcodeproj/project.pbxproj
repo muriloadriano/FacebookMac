@@ -204,7 +204,7 @@
 		62192658174D35A3006A1877 /* XMPPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPUser.h; sourceTree = "<group>"; };
 		62192676174D35A3006A1877 /* XMPPMessage+XEP_0085.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XMPPMessage+XEP_0085.h"; sourceTree = "<group>"; };
 		62192677174D35A3006A1877 /* XMPPMessage+XEP_0085.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XMPPMessage+XEP_0085.m"; sourceTree = "<group>"; };
-		62192690174D38D4006A1877 /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMPPFramework.h; path = Test/XMPPFramework.h; sourceTree = "<group>"; };
+		62192690174D38D4006A1877 /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMPPFramework.h; path = Src/XMPPFramework.h; sourceTree = "<group>"; };
 		621926A6174D3C23006A1877 /* XMPPBandwidthMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPBandwidthMonitor.h; sourceTree = "<group>"; };
 		621926A7174D3C23006A1877 /* XMPPBandwidthMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPBandwidthMonitor.m; sourceTree = "<group>"; };
 		621926A9174D3C24006A1877 /* XMPPCoreDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPCoreDataStorage.h; sourceTree = "<group>"; };
@@ -526,7 +526,7 @@
 				62192770174D3C25006A1877 /* XEP-0297 */,
 			);
 			name = Extensions;
-			path = Test/Extensions;
+			path = Src/Extensions;
 			sourceTree = "<group>";
 		};
 		62192641174D35A3006A1877 /* Roster */ = {
@@ -1000,8 +1000,9 @@
 				62A5E5011746B7EB0002FA6F /* DDTTYLogger.m */,
 				62A5E5021746B7EB0002FA6F /* Extensions */,
 			);
-			path = CocoaLumberjack;
-			sourceTree = "<group>";
+			name = CocoaLumberjack;
+			path = Src/Vendor/CocoaLumberjack;
+			sourceTree = SOURCE_ROOT;
 		};
 		62A5E5021746B7EB0002FA6F /* Extensions */ = {
 			isa = PBXGroup;
@@ -1021,8 +1022,9 @@
 				62A5E5111746B81F0002FA6F /* GCDAsyncSocket.h */,
 				62A5E5121746B81F0002FA6F /* GCDAsyncSocket.m */,
 			);
-			path = CocoaAsyncSocket;
-			sourceTree = "<group>";
+			name = CocoaAsyncSocket;
+			path = Src/Vendor/CocoaAsyncSocket;
+			sourceTree = SOURCE_ROOT;
 		};
 		62A5E5141746B8A30002FA6F /* libidn */ = {
 			isa = PBXGroup;
@@ -1031,8 +1033,9 @@
 				62A5E5171746B8A30002FA6F /* libidn.a */,
 				62A5E5181746B8A30002FA6F /* stringprep.h */,
 			);
-			path = libidn;
-			sourceTree = "<group>";
+			name = libidn;
+			path = Src/Vendor/libidn;
+			sourceTree = SOURCE_ROOT;
 		};
 		62A5E51D1746B9790002FA6F /* Authentication */ = {
 			isa = PBXGroup;
@@ -1046,7 +1049,7 @@
 				62A5E5301746B9790002FA6F /* XMPPSASLAuthentication.h */,
 			);
 			name = Authentication;
-			path = Test/Authentication;
+			path = Src/Authentication;
 			sourceTree = "<group>";
 		};
 		62A5E51E1746B9790002FA6F /* Anonymous */ = {
@@ -1114,7 +1117,7 @@
 				62A5E5371746B9790002FA6F /* NSXMLElement+XMPP.m */,
 			);
 			name = Categories;
-			path = Test/Categories;
+			path = Src/Categories;
 			sourceTree = "<group>";
 		};
 		62A5E5381746B9790002FA6F /* Core */ = {
@@ -1141,7 +1144,7 @@
 				62A5E54B1746B9790002FA6F /* XMPPStream.m */,
 			);
 			name = Core;
-			path = Test/Core;
+			path = Src/Core;
 			sourceTree = "<group>";
 		};
 		62A5E54C1746B9790002FA6F /* Utilities */ = {
@@ -1161,7 +1164,7 @@
 				62A5E5581746B9790002FA6F /* XMPPSRVResolver.m */,
 			);
 			name = Utilities;
-			path = Test/Utilities;
+			path = Src/Utilities;
 			sourceTree = "<group>";
 		};
 		62A5E5701746B9BA0002FA6F /* Resources */ = {
@@ -1172,7 +1175,7 @@
 				623411721867D98600E1623D /* chat.html */,
 			);
 			name = Resources;
-			path = Test/Resources;
+			path = Src/Resources;
 			sourceTree = "<group>";
 		};
 		62A5E5711746B9BA0002FA6F /* Images */ = {
@@ -1276,7 +1279,7 @@
 				62157C77186BF48D006E4720 /* MAVFriendContainer.m */,
 			);
 			name = FacebookMac;
-			path = Test;
+			path = Src;
 			sourceTree = "<group>";
 		};
 		62A88134173B690B00658EA6 /* Supporting Files */ = {
@@ -1611,16 +1614,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Test/FacebookMac-Prefix.pch";
-				INFOPLIST_FILE = "Test/FacebookMac-Info.plist";
+				GCC_PREFIX_HEADER = "Src/FacebookMac-Prefix.pch";
+				INFOPLIST_FILE = "Src/FacebookMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Test/Vendor/libidn\"",
+					"\"$(SRCROOT)/Src/Vendor/libidn\"",
 				);
 				PRODUCT_NAME = FacebookMac;
 				WRAPPER_EXTENSION = app;
@@ -1636,11 +1636,11 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Test/FacebookMac-Prefix.pch";
-				INFOPLIST_FILE = "Test/FacebookMac-Info.plist";
+				GCC_PREFIX_HEADER = "Src/FacebookMac-Prefix.pch";
+				INFOPLIST_FILE = "Src/FacebookMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Test/Vendor/libidn\"",
+					"\"$(SRCROOT)/Src/Vendor/libidn\"",
 				);
 				PRODUCT_NAME = FacebookMac;
 				WRAPPER_EXTENSION = app;
