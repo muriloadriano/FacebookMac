@@ -17,8 +17,6 @@
                 <outlet property="nameLabel" destination="7fE-oC-gmJ" id="cuG-DQ-9eY"/>
                 <outlet property="sendButton" destination="rqc-x7-Nhz" id="Rs8-i6-TMN"/>
                 <outlet property="statusLabel" destination="ied-RP-dMj" id="aLO-QC-LXq"/>
-                <outlet property="testeView" destination="tKa-79-BHY" id="2r3-W6-1RC"/>
-                <outlet property="testeWindow" destination="1Ab-W1-zjy" id="ew7-Zy-0tc"/>
                 <outlet property="textInput" destination="2TB-1B-s3p" id="EWK-al-TXh"/>
                 <outlet property="titleBar" destination="jQi-Ja-V9C" id="CE4-Ge-uvh"/>
                 <outlet property="underView" destination="0aJ-k0-6yd" id="2xz-RP-rFA"/>
@@ -29,7 +27,7 @@
         <customObject id="-3" userLabel="Application"/>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="3" customClass="NSPanel">
             <rect key="contentRect" x="131" y="159" width="80" height="80"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <value key="minSize" type="size" width="130" height="130"/>
             <value key="maxSize" type="size" width="130" height="130"/>
             <view key="contentView" id="4">
@@ -129,7 +127,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="WKA-Uw-xrR">
-                                <rect key="frame" x="223" y="1" width="16" height="58"/>
+                                <rect key="frame" x="-15" y="1" width="16" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
@@ -156,70 +154,5 @@
                 </customView>
             </subviews>
         </customView>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="1Ab-W1-zjy">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="131" y="165" width="231" height="218"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
-            <view key="contentView" wantsLayer="YES" id="tKa-79-BHY">
-                <rect key="frame" x="0.0" y="0.0" width="231" height="218"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4EA-8A-47M">
-                        <rect key="frame" x="91" y="85" width="48" height="48"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="guta" id="5Hy-vG-VIA"/>
-                    </imageView>
-                    <scrollView wantsLayer="YES" fixedFrame="YES" alphaValue="0.30000000000000016" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chr-zs-zaa">
-                        <rect key="frame" x="-5" y="55" width="240" height="135"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="m8F-vP-5AX">
-                            <rect key="frame" x="1" y="1" width="238" height="133"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="lNj-5S-1pu">
-                                    <rect key="frame" x="0.0" y="0.0" width="238" height="133"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="238" height="133"/>
-                                    <size key="maxSize" width="463" height="10000000"/>
-                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="238" height="133"/>
-                                    <size key="maxSize" width="463" height="10000000"/>
-                                </textView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </clipView>
-                        <backgroundFilters>
-                            <ciFilter name="CIGaussianBlur">
-                                <configuration>
-                                    <null key="inputImage"/>
-                                    <real key="inputRadius" value="10"/>
-                                </configuration>
-                            </ciFilter>
-                        </backgroundFilters>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="cVA-QH-kDF">
-                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="XZO-YO-t5g">
-                            <rect key="frame" x="223" y="1" width="16" height="133"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
-                </subviews>
-                <contentFilters>
-                    <ciFilter name="CIGaussianBlur">
-                        <configuration>
-                            <null key="inputImage"/>
-                            <real key="inputRadius" value="10"/>
-                        </configuration>
-                    </ciFilter>
-                </contentFilters>
-            </view>
-        </window>
     </objects>
-    <resources>
-        <image name="guta" width="311" height="311"/>
-    </resources>
 </document>
